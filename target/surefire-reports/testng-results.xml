@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-11-07T15:23:18 GMT+04:00" name="Surefire suite" finished-at="2020-11-07T15:26:20 GMT+04:00" duration-ms="182089">
+    <groups>
+    </groups>
+    <test started-at="2020-11-07T15:23:18 GMT+04:00" name="Surefire test" finished-at="2020-11-07T15:26:20 GMT+04:00" duration-ms="182089">
+      <class name="TestsDNS">
+        <test-method signature="AuthTest()[pri:0, instance:TestsDNS@456abb66]" started-at="2020-11-07T15:23:18 GMT+04:00" name="AuthTest" finished-at="2020-11-07T15:23:32 GMT+04:00" duration-ms="14166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuthTest -->
+        <test-method signature="CartTesting()[pri:0, instance:TestsDNS@456abb66]" started-at="2020-11-07T15:23:33 GMT+04:00" name="CartTesting" finished-at="2020-11-07T15:24:58 GMT+04:00" duration-ms="85377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CartTesting -->
+        <test-method signature="CityChangeTest(java.lang.String)[pri:0, instance:TestsDNS@456abb66]" started-at="2020-11-07T15:24:58 GMT+04:00" name="CityChangeTest" data-provider="CitysOfDNS" finished-at="2020-11-07T15:25:24 GMT+04:00" duration-ms="25698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Камышин]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CityChangeTest -->
+        <test-method signature="CityChangeTest(java.lang.String)[pri:0, instance:TestsDNS@456abb66]" started-at="2020-11-07T15:25:24 GMT+04:00" name="CityChangeTest" data-provider="CitysOfDNS" finished-at="2020-11-07T15:25:52 GMT+04:00" duration-ms="28154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Волгоград]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CityChangeTest -->
+        <test-method signature="CityChangeTest(java.lang.String)[pri:0, instance:TestsDNS@456abb66]" started-at="2020-11-07T15:25:52 GMT+04:00" name="CityChangeTest" data-provider="CitysOfDNS" finished-at="2020-11-07T15:26:20 GMT+04:00" duration-ms="28195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Владивосток]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CityChangeTest -->
+      </class> <!-- TestsDNS -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

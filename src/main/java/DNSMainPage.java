@@ -7,11 +7,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DNSMainPage {
     WebDriver driver;
 
-    By button_login = By.xpath("//*[@id=\"header-search\"]/div/div[4]/button");
-    By buttonEnterWithPassword = By.className("block-other-login-methods__password-caption");
+    //    By button_login = By.xpath("//*[@id=\"header-search\"]/div/div[4]/button");
+    By button_login = By.cssSelector("#header-search > div > div.header__login > button");
+    By buttonEnterWithPassword = By.xpath("//*[@class='block-other-login-methods__password-caption']");
 
-    By fieldLoginPhone = By.xpath("/html/body/header/div[2]/div[2]/div/div/div[2]/div/input");
-    By fieldPassword = By.xpath("/html/body/header/div[2]/div[2]/div/div/div[3]/div/input");
+//    By fieldLoginPhone = By.xpath("/html/body/header/div[2]/div[2]/div/div/div[2]/div/input");
+//    By fieldPassword = By.xpath("/html/body/header/div[2]/div[2]/div/div/div[3]/div/input");
+
+
+    //    By fieldLoginPhone = By.xpath("/html/body/header/div[2]/div[2]/div/div/div[2]/div/input");
+    // Да, это один и тот же селектор. В функции просто выбирается поле по индексам
+    // 0 - Логин, 1 - пароль. Зато не xpath)
+    By fieldLoginPhone = By.xpath("//*[@class='base-ui-input-row__input base-ui-input-row__input_with-icon']");
+    By fieldPassword = By.xpath("//*[@class='base-ui-input-row__input base-ui-input-row__input_with-icon']");
 
     By profileImg = By.xpath("//*[@id=\"header-search\"]/div/div[4]/img[1]");
 
@@ -29,11 +37,12 @@ public class DNSMainPage {
     }
 
     public void SendKeysToFieldLogin(String login) {
-        driver.findElement(fieldLoginPhone).sendKeys(login);
+//        driver.findElement(fieldLoginPhone).sendKeys(login);
+        driver.findElements(fieldLoginPhone).get(0).sendKeys(login);
     }
 
     public void SendKeysToFieldPassword(String password) {
-        driver.findElement(fieldPassword).sendKeys(password);
+        driver.findElements(fieldPassword).get(1).sendKeys(password);
     }
 
     public void SendEnterToFieldPassword() {
@@ -111,7 +120,7 @@ public class DNSMainPage {
 
         try {
             new WebDriverWait(driver, 3).
-                    until(driver1 -> driver1.findElement(By.tagName("HAHA_ISHI_LOX")).isEnabled());
+                    until(driver1 -> driver1.findElement(By.tagName("NotExistElement")).isEnabled());
         } catch (Exception ignored) {
             System.out.println("Мы просто подождали три секунды.");
         }
@@ -126,7 +135,10 @@ public class DNSMainPage {
         return false;
     }
 
-    By searchField = By.xpath("/html/body/header/nav/div/form/div/input");
+//    By searchField = By.xpath("/html/body/header/nav/div/form/div/input");
+//    By searchField = By.className("presearch");
+//    By searchField = By.xpath("//*[@class='presearch']");
+    By searchField = By.xpath("//*[@class='presearch']/div/input");
 
     public void SendKeysToSearch(String query) {
         driver.findElement(searchField).sendKeys(query);

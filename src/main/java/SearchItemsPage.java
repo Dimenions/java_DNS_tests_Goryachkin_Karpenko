@@ -13,10 +13,13 @@ public class SearchItemsPage {
         this.driver = driver;
     }
 
-    By minValuePriceField = By.xpath("//*[@id=\"catalog-items-page\"]/div[4]/div[1]/div/div[3]/div[4]/div/div/div[1]/input");
-    By maxValuePriceField = By.xpath("//*[@id=\"catalog-items-page\"]/div[4]/div[1]/div/div[3]/div[4]/div/div/div[2]/input");
+    // ui-collapse__content ui-collapse__content_list ui-collapse__content_default-in
+//    By minValuePriceField = By.xpath("//*[@class='ui-collapse__content ui-collapse__content_list ui-collapse__content_default-in']/div/div[0]");
+    By minValuePriceField = By.xpath("//*[@class='ui-input-small__input ui-input-small__input_list']");
+//    By maxValuePriceField = By.xpath("//*[@class='ui-collapse__content ui-collapse__content_list ui-collapse__content_default-in']/div/div[1]");
+    By maxValuePriceField = By.xpath("//*[@class='ui-input-small__input ui-input-small__input_list']");
 
-    By acceptChangesButton = By.xpath("//*[@id=\"catalog-items-page\"]/div[4]/div[1]/div/div[4]/div/button[1]");
+    By acceptChangesButton = By.xpath("//*[@class='button-ui button-ui_brand left-filters__button']");
 
     By catalogItem = By.className("catalog-item");
     By currentPriceText = By.className("product-min-price__current");
@@ -27,11 +30,11 @@ public class SearchItemsPage {
     By buyButton = By.className("primary-btn");
 
     public void SendKeysToMinValuePriceField(int price) {
-        driver.findElement(minValuePriceField).sendKeys(Integer.toString(price));
+        driver.findElements(minValuePriceField).get(0).sendKeys(Integer.toString(price));
     }
 
     public void SendKeysToMaxValuePriceField(int price) {
-        driver.findElement(maxValuePriceField).sendKeys(Integer.toString(price));
+        driver.findElements(maxValuePriceField).get(0).sendKeys(Integer.toString(price));
     }
 
     public void PressAcceptChangesButton() {
@@ -78,22 +81,6 @@ public class SearchItemsPage {
             if (itemPrice < 999 && itemPrice > 1999)
                 throw new ArithmeticException();
         });
-
-
-//        Actions scrollUp = new Actions(driver);
-////        scrollUp.moveToElement(driver.findElement(By.id("header-search"))).build().perform();
-////        ((JavascriptExecutor)driver).executeScript("window.scrollTo(0, 0);");
-//        ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + "," + -10000 + ");");
-//        new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.tagName("html")));
-//        new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
-//        ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + "," + -10000 + ");");
-//        try {
-//            new WebDriverWait(driver, 3).
-//                    until(driver1 -> driver1.findElement(By.tagName("HAHA_ISHI_LOX")).isEnabled());
-//        } catch (Exception ignored) {
-//            System.out.println("Мы просто подождали 10 секунды");
-//        }
-//        ((JavascriptExecutor)driver).executeScript("window.scrollBy(" + 0 + "," + -10000 + ");");
 
 
         new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.tagName("html")));

@@ -5,7 +5,9 @@
     <classes>
       <class name="TestsDNS">
         <methods>
-          <include name="CityChangeTest" invocation-numbers="2"/>
+          <include name="CloseWindow"/>
+          <include name="CartTesting"/>
+          <include name="StartUp"/>
         </methods>
       </class> <!-- TestsDNS -->
     </classes>

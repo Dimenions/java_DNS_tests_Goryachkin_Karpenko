@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestsDNS
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 184.326 s - in TestsDNS
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 144.333 s <<< FAILURE! - in TestsDNS
+TestsDNS.CartTesting  Time elapsed: 73.204 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for CartPage$$Lambda$475/0x0000000800e25ee8@7404ddca (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DIMENIONS', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:3151}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 87.0.4280.67 (0e5d92df40086..., userDataDir: C:\Users\DIMENI~1\AppData\L...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 87.0.4280.88, webStorageEnabled: true, webauthn:virtualAuthenticators: true}
+Session ID: 5348c40e0c3a94e36e61cbcc782aeb10
+	at TestsDNS.CartTesting(TestsDNS.java:58)
+
